@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un pequeño detalle 🌸</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(#fff7fb, #ffeaf4);
+        font-family: Georgia, serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor {
+        width: 90%;
+        max-width: 1000px;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 40px;
+    }
+
+    .arbol {
+        position: relative;
+        width: 450px;
+        height: 550px;
+    }
+
+    .tronco {
+        position: absolute;
+        width: 55px;
+        height: 280px;
+        background: linear-gradient(90deg, #633b28, #8b5638, #633b28);
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 45% 45% 20% 20%;
+    }
+
+    .rama {
+        position: absolute;
+        height: 18px;
+        background: #70432d;
+        border-radius: 20px;
+        transform-origin: left center;
+    }
+
+    .rama1 {
+        width: 180px;
+        left: 50%;
+        bottom: 220px;
+        transform: rotate(-35deg);
+    }
+
+    .rama2 {
+        width: 170px;
+        right: 50%;
+        bottom: 270px;
+        transform: rotate(35deg);
+        transform-origin: right center;
+    }
+
+    .rama3 {
+        width: 140px;
+        left: 50%;
+        bottom: 340px;
+        transform: rotate(-55deg);
+    }
+
+    .rama4 {
+        width: 130px;
+        right: 50%;
+        bottom: 370px;
+        transform: rotate(55deg);
+        transform-origin: right center;
+    }
+
+    .flores {
+        position: absolute;
+        inset: 0;
+    }
+
+    .flor {
+        position: absolute;
+        font-size: 32px;
+        opacity: 0;
+        animation: aparecer 1s forwards;
+        filter: drop-shadow(0 3px 3px rgba(0,0,0,.15));
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+            transform: scale(0) rotate(-90deg);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
+    .mensaje {
+        max-width: 360px;
+        text-align: center;
+        color: #6b3650;
+        animation: aparecerMensaje 3s ease forwards;
+    }
+
+    .mensaje h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    .mensaje p {
+        font-size: 21px;
+        line-height: 1.6;
+    }
+
+    @keyframes aparecerMensaje {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 700px) {
+        body {
+            overflow: auto;
+        }
+
+        .contenedor {
+            flex-direction: column;
+            padding: 30px 10px;
+        }
+
+        .arbol {
+            transform: scale(.75);
+            margin-bottom: -80px;
+        }
+
+        .mensaje h1 {
+            font-size: 32px;
+        }
+
+        .mensaje p {
+            font-size: 18px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="arbol">
+
+        <div class="tronco"></div>
+
+        <div class="rama rama1"></div>
+        <div class="rama rama2"></div>
+        <div class="rama rama3"></div>
+        <div class="rama rama4"></div>
+
+        <div class="flores">
+
+            <span class="flor" style="left:20%;top:25%;animation-delay:.2s">🌸</span>
+            <span class="flor" style="left:38%;top:18%;animation-delay:.5s">🌷</span>
+            <span class="flor" style="left:55%;top:22%;animation-delay:.8s">🌸</span>
+            <span class="flor" style="left:70%;top:30%;animation-delay:1.1s">🌺</span>
+            <span class="flor" style="left:28%;top:38%;animation-delay:1.4s">🌸</span>
+            <span class="flor" style="left:48%;top:35%;animation-delay:1.7s">🌷</span>
+            <span class="flor" style="left:64%;top:42%;animation-delay:2s">🌸</span>
+            <span class="flor" style="left:78%;top:48%;animation-delay:2.3s">🌺</span>
+            <span class="flor" style="left:15%;top:48%;animation-delay:2.6s">🌷</span>
+            <span class="flor" style="left:35%;top:52%;animation-delay:2.9s">🌸</span>
+            <span class="flor" style="left:55%;top:55%;animation-delay:3.2s">🌺</span>
+            <span class="flor" style="left:72%;top:58%;animation-delay:3.5s">🌸</span>
+            <span class="flor" style="left:25%;top:65%;animation-delay:3.8s">🌷</span>
+            <span class="flor" style="left:45%;top:68%;animation-delay:4.1s">🌸</span>
+            <span class="flor" style="left:65%;top:70%;animation-delay:4.4s">🌺</span>
+
+        </div>
+    </div>
+
+    <div class="mensaje">
+        <h1>Para ti 🌸</h1>
+
+        <p>
+            Hay cosas que no necesitan
+            muchas palabras para ser
+            especiales.
+        </p>
+
+        <p>
+            Espero que este pequeño
+            detalle te saque una sonrisa.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
